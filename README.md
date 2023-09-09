@@ -98,6 +98,17 @@ npm run start
 
 The React app will be accessible at http://localhost:3000/.
 
+Don't forget to log out of your virtual enviroment when you are done.
+
+Mac:
+```bash
+deactivate
+```
+
+Windows:
+```bash
+logrocket_env\Scripts\deactivate
+```
 
 That's it! You now have a working setup for a React front-end with a Django back-end. Happy coding!
 
