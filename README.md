@@ -112,3 +112,13 @@ then
 ```bash
 source logrocket_env/bin/activate
 ```
+
+##### DO NOT FORGET TO ASSOCIATE WITH YOUR REPO NOT THE ORIGINAL ONE
+
+In the root of the project delete the .git 
+
+```bash
+rm -rf .git
+```
+
+then follow the usual git setup instructions...
