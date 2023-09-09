@@ -8,6 +8,7 @@ This is a boilerplate project for setting up a React front-end with a Django bac
 ![Local Image](images/1.png)
 ![Local Image](images/2.png)
 ![Local Image](images/3.png)
+![Local Image](images/4.png)
 
 
 
@@ -35,6 +36,9 @@ cd sei-05-react-django-boilerplate
 ```bash
 source logrocket_env/bin/activate
 ```
+```bash
+cd django_react_proj
+```
 
 For Windows:
 ```bash
@@ -43,7 +47,9 @@ cd sei-05-react-django-boilerplate
 ```bash
 logrocket_env\Scripts\activate
 ```
-
+```bash
+cd django_react_proj
+```
 ### 3. Install Packages
 You should getaway with just using python and pip instead pip3 and python3.
 ```bash
