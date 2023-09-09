@@ -44,10 +44,16 @@ cd sei-05-react-django-boilerplate
 logrocket_env\Scripts\activate
 ```
 
-### 3. Modify Settings (Optional)
+### 3. Install Packages
+You should getaway with just using python and pip instead pip3 and python3.
+```bash
+pip install django djangorestframework django-cors-headers
+```
+
+### 4. Modify Settings (Optional)
 If needed, modify the settings.py file in the react-django directory to add a username and password.
 
-### 4. Apply Migrations
+### 5. Apply Migrations
 Apply Migrations
 Run database migrations:
 
@@ -55,7 +61,7 @@ Run database migrations:
 python manage.py migrate
 ```
 
-### 5. Start the Django Server
+### 6. Start the Django Server
 
 Make sure you are in the right directory. Same as the manage.py
 
@@ -67,7 +73,7 @@ python manage.py runserver
 Access the API at http://localhost:8000/api/.
 
 
-### 6. Start the React App
+### 7. Start the React App
 In a separate terminal window, navigate to the students-fe directory:
 
 ```bash
