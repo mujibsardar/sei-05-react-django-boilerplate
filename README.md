@@ -1,4 +1,4 @@
-# SEI-05 React Django Boilerplate
+# SEI-05 React Django Boilerplate with Authentication
 
 Original source: https://blog.logrocket.com/using-react-django-create-app-tutorial/
 
