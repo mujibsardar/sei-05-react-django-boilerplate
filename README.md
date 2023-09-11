@@ -56,16 +56,22 @@ You should getaway with just using python and pip instead pip3 and python3.
 pip install django djangorestframework django-cors-headers
 ```
 
-### 4. Modify Settings (Optional)
-If needed, modify the settings.py file in the react-django directory to add a username and password.
+### 4. Create DB (if it does not exist) and modify DB info in Settings 
+Create DB 
+```bash
+createdb boilerplate-db
+```
+If needed, modify the settings.py file in the project directory to use postgres and to add a username and password.
 
 ### 5. Apply Migrations
 Apply Migrations
-Run database migrations:
+Run database migrations in the directory where your manage.py is:
 
 ```bash
 python manage.py migrate
 ```
+
+if you run into order conflicts try running the migrations files individually per app. e.g. python manage.py users etc.
 
 ### 6. Start the Django Server
 
@@ -83,7 +89,7 @@ Access the API at http://localhost:8000/api/.
 In a separate terminal window, navigate to the students-fe directory:
 
 ```bash
-cd students-fe
+cd client
 ```
 
 Install Node.js dependencies:
@@ -115,6 +121,8 @@ That's it! You now have a working setup for a React front-end with a Django back
 
 
 ###### ONLY IF YOU RUN INTO ENVIROMENT ISSUES DO THIS INSTEAD:
+
+Delete the existing logrocket_env directory.
 
 ```bash
 python3 -m venv logrocket_env

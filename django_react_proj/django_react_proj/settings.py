@@ -1,3 +1,4 @@
+
 """
 Django settings for django_react_proj project.
 
@@ -10,6 +11,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+from datetime import timedelta
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -39,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'students'
+    'rest_framework_simplejwt',
+    'students',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -81,9 +85,10 @@ WSGI_APPLICATION = 'django_react_proj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'boilerplate-db', # <==== TODO Change teh name of the database
+        'NAME': 'boilerplate-db', # <==== TODO Change the name of the database
     }
 }
+
 
 
 # Password validation
@@ -128,3 +133,22 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    # 'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
+    'SLIDING_TOKEN_LIFETIME': timedelta(minutes=120),
+    'SLIDING_TOKEN_REFRESH_LIFETIME_GRACE_PERIOD': timedelta(days=2),
+    'SLIDING_TOKEN_REFRESH_LOOKUP': 'path',
+    'SLIDING_TOKEN_REFRESH_REISSUE': True,
+}
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
