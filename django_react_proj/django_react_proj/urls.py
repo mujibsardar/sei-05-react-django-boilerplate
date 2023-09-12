@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path, re_path
 from students import views as student_views
 from users import urls as user_urls
+from spotify_api import urls as spotify_urls
 from rest_framework_simplejwt import views as jwt_views
 
 urlpatterns = [
@@ -33,4 +34,6 @@ urlpatterns = [
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
     # Users App
     path('api/users/', include(user_urls)),
+    # Spotify API
+    path('api/spotify/', include(spotify_urls)),
 ]

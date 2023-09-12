@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
+import SpotifyTopTracks from './components/Spotify/SpotifyTopTracks';
 import AuthPage from './components/AuthPage/AuthPage';
 import { getUser } from './utilities/users-service';
 
@@ -16,6 +17,7 @@ function App() {
           <>
             <Routes>
               <Route exact path="/" element={<Home />} />
+              <Route exact path="/spotify/top-tracks" element={<SpotifyTopTracks user={user}/>} />
             </Routes>
           </>
         ) : (

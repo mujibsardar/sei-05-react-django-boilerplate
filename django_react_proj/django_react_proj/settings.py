@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework_simplejwt',
     'students',
-    'users'
+    'users',
+    'spotify_api',
 ]
 
 MIDDLEWARE = [
